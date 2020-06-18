@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Menu</title>
+</head>
+<body>
+	<h1>Admin Menu</h1>
+	<form method="post" action="menuServlet" onsubmit="return ValidateForm();">
+    <fieldset>
+    <legend>What Admin Action Are You Performing</legend>
+    <input type="radio" name="task" value="Show All Users" id="ShowU">Show All Users<br>
+    <input type="radio" name="task" value="Show All Users by ID" id="ShowID">Show All Users by ID<br>
+    <input type="radio" name="task" value="Show All Accounts" id="ShowA">Show All Accounts<br>
+    <input type="radio" name="task" value="Show All Accounts by ID" id="ShowAID">Show All Accounts by ID<br>
+    <input type="radio" name="task" value="Show All Accounts by Status" id="ShowASt">Show All Accounts by Status<br>
+    <input type="radio" name="task" value="Show All Accounts by User Name" id="ShowAUname">Show All Accounts by User Name<br>
+    <input type="radio" name="task" value="Create Account" id="CreateA">Create Account<br>
+    <input type="radio" name="task" value="Update an Account" id="UpdateA">Update an Account<br>
+    <input type="radio" name="task" value="Transaction" id="Deposit">Transaction<br>
+    <input type="radio" name="task" value="Create a User" id="DeleteU">Create a User<br>
+    <input type="radio" name="task" value="Delete a User" id="DeleteU">Delete a User<br>
+    <input type="radio" name="task" value="View YOUR Account" id="ViewA">View YOUR Account<br>
+    <input type="radio" name="task" value="Change YOUR Password" id="ChangePass">Change YOUR Password<br>
+    <input type="radio" name="task" value="Logout" id="Logout">Logout<br>
+        <br>
+    <input type="submit" value="Submit now">
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+function ValidateForm()
+{
+    var radioButtons = document.getElementsByName("task");
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            if(confirm("You have selected " + radioButtons[i].value + " as your task. Is that correct?"))
+                return true;
+            else
+                return false;
+        }
+    }
+}
+</script>
+</body>
+</html>

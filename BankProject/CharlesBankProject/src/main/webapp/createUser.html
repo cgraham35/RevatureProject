@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+	<h1>Create a New Bank User!</h1>
+	<body>
+		<form method="post" action="addUserServlet">  <!-- web.xml <url-pattern> -->
+			<table>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" name="firstname"/></td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" name="lastname"/></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" name="email"/></td>
+				</tr>
+				<tr>
+					<td>User Role</td>
+					<td><input type="text" name="urole"/></td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td><input type="password" name="password"/></td>
+				</tr>
+				<tr>
+					<td />
+					<td><input type="submit" value="Create!"/></td>
+				</tr>
+
+			</table>
+		</form>
+	</body>
+</html>

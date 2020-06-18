@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Make a transaction</title>
+</head>
+<body>
+	<h1>Make a transaction</h1>
+	<form method="post" action="transactServlet">
+		<table>
+			<tr>
+				<td>Account Email</td>
+				<td><input name="email" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Account Number</td>
+				<td><input name="accountid" type="text" /></td>
+			</tr>
+			
+			<tr>
+				<td>Withdrawal or Deposit?</td>
+				<td><input name="changetype" type="text" /></td>
+			</tr>
+			
+			<tr>
+				<td>Amount with sign</td>
+				<td><input name="amount" type="text" /></td>
+			</tr>
+
+			<tr>
+				<td />
+				<td><input type="submit" value="Enter" /></td>
+		</table>
+	</form>
+</body>
+</html>

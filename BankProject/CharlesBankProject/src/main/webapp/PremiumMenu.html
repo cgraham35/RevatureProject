@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Premium Customer Menu</title>
+</head>
+<body>
+	<h1>Premium Customer Menu</h1>
+	<p>Springfield Bank premium customers are customers who have more than one account with us.
+	Any combination of checking or savings will do.  In return we offer a .5 percent higher interest
+	rate on all accounts you have with us.</p>
+	<p>Current Standard Rates: Checking 1.00 Savings .5</p>
+	<p>Current Premium Rates: Checking 1.50 Savings 1.0</p>
+	<p>Minimum Average Balance (Monthly) of 100 dollars in savings account required.</p>
+	<form method="post" action="menuServlet" onsubmit="return ValidateForm();">
+    <fieldset>
+    <legend>What Action Are You Performing</legend>
+    <input type="radio" name="task" value="View YOUR Account" id="ViewA">View Accounts<br>
+    <input type="radio" name="task" value="Change YOUR Password" id="ChangePass">Change Password<br>
+    <input type="radio" name="task" value="Logout" id="Logout">Logout<br>   
+        <br>
+    <input type="submit" value="Submit now">
+    </fieldset>
+</form>
+
+<script type="text/javascript">
+function ValidateForm()
+{
+    var radioButtons = document.getElementsByName("task");
+    for(var i = 0; i < radioButtons.length; i++)
+    {
+        if(radioButtons[i].checked == true)
+        {
+            if(confirm("You have selected " + radioButtons[i].value + " as your task. Is that correct?"))
+                return true;
+            else
+                return false;
+        }
+    }
+}
+</script>
+</body>
+</html>
